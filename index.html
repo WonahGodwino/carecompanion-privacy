@@ -101,10 +101,13 @@
 
   <h2>5. Data storage &amp; security</h2>
   <ul>
-    <li>Data is stored locally on the device and synchronised to the facility&rsquo;s CareCompanion server
-    over an encrypted connection.</li>
-    <li>Patient/clinical data on the device is held with a no-retention design (loaded into memory for
-    use and not retained indefinitely on the device).</li>
+    <li>Patient and clinical records are not retained on the device. They are loaded into memory from
+    the facility&rsquo;s CareCompanion server while the device is connected to the facility network, and
+    are discarded when that connection ends.</li>
+    <li>Data is synchronised with the facility&rsquo;s CareCompanion server over the facility&rsquo;s local
+    network (LAN). This network may not have internet connectivity. All communication is encrypted.</li>
+    <li>Non-clinical operational data (such as app settings, login activity and call logs) may be
+    stored locally on the device.</li>
     <li>Credentials and secrets are stored using Android encrypted storage.</li>
     <li>The App blocks screenshots and screen recording (<code>FLAG_SECURE</code>) to reduce exposure of
     on-screen patient information.</li>
