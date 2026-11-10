@@ -39,100 +39,64 @@
 
 <div class="wrap">
 
-  <p><strong>Effective date:</strong> 29 October 2026</p>
+  <p><strong>Effective date:</strong> 10 November 2026</p>
 
-  <p><strong>Controller:</strong> Excellence Community Education Welfare Scheme (ECEWS)
-  (&ldquo;we&rdquo;, &ldquo;us&rdquo;, &ldquo;our&rdquo;), Plot 549, Nwaniba Road, Opposite Atlantic FM
-  radio station, Uyo, Akwa Ibom State, Nigeria.</p>
+  <p><strong>Developer/Organisation:</strong> Excellence Community Education Welfare Scheme (ECEWS)</p>
+  <p><strong>Application:</strong> CareCompanion</p>
 
   <p>CareCompanion (the &ldquo;App&rdquo;) is a mobile tool used by authorised Frontline healthcare
   workers to support the care and follow-up of clients receiving HIV/AIDS and related health services
-  in the supported facilities. This policy explains what data the App processes, why, and how we
-  protect it.</p>
+  in the supported facilities. This policy is based on the App&rsquo;s actual data-processing
+  functionality.</p>
 
-  <h2>1. Data we collect</h2>
-  <p>The App is used by trained health staff (case managers, clinicians) at health facilities. It may
-  process the following categories of data:</p>
-  <table>
-    <tr><th>Category</th><th>Examples</th></tr>
-    <tr><td><strong>Health data</strong></td><td>HIV status, ART regimen, viral load results, appointment history, PMTCT/EID/TB/TPT service records</td></tr>
-    <tr><td><strong>Personal information</strong></td><td>Client names, phone numbers, client identification codes</td></tr>
-    <tr><td><strong>Biometric data</strong></td><td>Fingerprint templates captured is used solely for biometric eligibility tracking to aid the Frontline healthcare workers to render biometric capturing and recapturing services based on biometric SOP</td></tr>
-    <tr><td><strong>Location data</strong></td><td>Approximate/precise device location, used only to confirm the device is within the authorised facility perimeter (geofence)</td></tr>
-    <tr><td><strong>Device/usage data</strong></td><td>Device model, app version, crash diagnostics, support tickets</td></tr>
-    <tr><td><strong>Call activity</strong></td><td>Records of outreach calls made to clients through the App</td></tr>
-  </table>
-
-  <h2>2. How we use data</h2>
+  <h2>1. Data collection</h2>
+  <p>CareCompanion does <strong>not</strong> collect or transmit user data off the mobile device, based
+  on its current implementation.</p>
+  <p>The App retrieves patient and clinical records, including existing biometric eligibility
+  information, from the designated facility CareCompanion server for authorised healthcare workers to
+  view and use in delivering healthcare services.</p>
+  <p>The App does <strong>not</strong>:</p>
   <ul>
-    <li>To provide and coordinate HIV/ART care and follow-up services for clients.</li>
-    <li>To identify clients accurately and safely (biometric matching).</li>
-    <li>To generate service worklists (refills, viral load, appointments, follow-ups) for health workers.</li>
-    <li>To provide in-app notifications (on-device) for appointments and follow-up tasks.</li>
-    <li>To monitor service quality and produce aggregate reports.</li>
-    <li>To provide technical support and improve the App.</li>
+    <li>Capture fingerprints or generate fingerprint templates.</li>
+    <li>Upload patient health records or personal information from the mobile device.</li>
+    <li>Transmit biometric eligibility information from the mobile device.</li>
+    <li>Transmit GPS coordinates for geofence verification.</li>
+    <li>Transmit staff usernames or user IDs during login.</li>
+    <li>Upload outreach call activity or call logs.</li>
+    <li>Use Firebase, Crashlytics, Google Analytics or other external SDKs to collect or transmit user
+    data.</li>
   </ul>
 
-  <div class="box">
-    <strong>Purpose limitation.</strong> The App is solely for patient management and tracking by case
-    managers and other frontline healthcare providers, in line with ECEWS service guidelines, and must
-    not be used for any other purpose without written permission from ECEWS.
-  </div>
+  <h2>2. Data sharing</h2>
+  <p>CareCompanion does <strong>not</strong> share user data with third-party service providers,
+  advertising networks or external analytics services.</p>
+  <p>Patient information retrieved by the App is obtained from the designated facility CareCompanion
+  server through the authorised facility network.</p>
 
-  <p>We do <strong>not</strong> use health data for advertising, and we do <strong>not</strong> sell
-  personal data.</p>
-
-  <h2>3. Legal basis</h2>
-  <p>We process personal and health data on the basis of:</p>
+  <h2>3. Data security</h2>
   <ul>
-    <li>The provision of health care and public-health functions;</li>
-    <li>The legitimate interests of the health programme (with appropriate safeguards); and/or</li>
-    <li>Consent, where applicable.</li>
+    <li>Patient records are accessed through the authorised facility network and are not intended to be
+    permanently stored on the mobile device.</li>
+    <li>Geofence verification is performed locally on the device.</li>
+    <li>Outreach call activity and other specified operational information remain stored locally.</li>
   </ul>
 
-  <h2>4. Data sharing</h2>
-  <p>Data does not leave the facility system. The App is not hosted by, and does not share data with,
-  any central server or third-party service provider outside the facility. Data is shared only as
-  necessary for care delivery:</p>
-  <ul>
-    <li>With the health facility and its authorised staff;</li>
-    <li>Where required by law or a competent authority.</li>
-  </ul>
+  <h2>4. Biometric information</h2>
+  <p>CareCompanion does <strong>not</strong> capture fingerprints, generate fingerprint templates or
+  perform biometric enrolment.</p>
+  <p>The App only retrieves and displays existing biometric eligibility information from the facility
+  system to assist authorised healthcare workers in determining whether biometric enrolment,
+  recapturing or further verification is required.</p>
 
-  <h2>5. Data storage &amp; security</h2>
-  <ul>
-    <li>Patient and clinical records are not retained on the device. They are loaded into memory from
-    the facility&rsquo;s CareCompanion server while the device is connected to the facility network, and
-    are discarded when that connection ends.</li>
-    <li>Data is synchronised with the facility&rsquo;s CareCompanion server over the facility&rsquo;s local
-    network (LAN). This network may not have internet connectivity. All communication is encrypted.</li>
-    <li>Non-clinical operational data (such as app settings, login activity and call logs) may be
-    stored locally on the device.</li>
-    <li>Credentials and secrets are stored in encrypted form.</li>
-    <li>The App blocks screenshots and screen recording (<code>FLAG_SECURE</code>) to reduce exposure of
-    on-screen patient information.</li>
-    <li>Access is restricted to authenticated, authorised users with role-based permissions.</li>
-  </ul>
+  <h2>5. Advertising and analytics</h2>
+  <p>CareCompanion does <strong>not</strong> use patient health information for advertising and does
+  <strong>not</strong> integrate Firebase, Crashlytics, Google Analytics or other external analytics
+  SDKs for collecting user data.</p>
 
-  <h2>6. Data retention</h2>
-  <p>Patient data is not stored in the App and does not persist on the device when it is outside the
-  facility or disconnected from the facility network.</p>
-
-  <h2>7. Children</h2>
-  <p>The App is intended for use by trained healthcare staff and is not directed at children. Minors&rsquo;
-  data is processed only in the course of clinical care provided by authorised staff.</p>
-
-  <h2>8. Changes to this policy</h2>
-  <p>We may update this policy from time to time in accordance with ECEWS service guidelines, without
-  prior notice. The latest version will always be available at this URL, with the
-  &ldquo;Effective date&rdquo; updated accordingly.</p>
-
-  <h2>9. Contact</h2>
+  <h2>Contact</h2>
   <p>For privacy questions or requests, contact:</p>
   <ul>
     <li><strong>Organisation:</strong> Excellence Community Education Welfare Scheme (ECEWS)</li>
-    <li><strong>Data protection contact:</strong> <span class="muted">[to be added]</span></li>
-    <li><strong>Email:</strong> <span class="muted">[to be added]</span></li>
     <li><strong>Address:</strong> Plot 549, Nwaniba Road, Opposite Atlantic FM radio station, Uyo,
     Akwa Ibom State, Nigeria</li>
   </ul>
